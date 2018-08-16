@@ -1,0 +1,77 @@
+header {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to top right, #4e3c3c, #ebebeb);
+  overflow: hidden;
+  z-index: -10;
+
+  .logo {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    padding: 30px 0px;
+    img {
+      width: 50px;
+    }
+    h4 {
+      font-family: "Merienda One", cursive;
+      font-weight: 400;
+    }
+  }
+  .intro-text {
+    font-family: "Montserrat", sans-serif;
+    width: 80%;
+    height: 40vh;
+    color: $textColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 auto;
+    h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      font-weight: bolder;
+      letter-spacing: 15px;
+      opacity: 0;
+      animation: titleAnimation 1s ease forwards 0.5s;
+    }
+    h3 {
+      font-weight: normal;
+      font-size: 25px;
+      margin-top: 20px;
+      opacity: 0;
+      animation: titleAnimation 1s ease forwards 1s;
+    }
+  }
+  .chair {
+    height: 90%;
+    position: absolute;
+    bottom: -10%;
+    left: 80%;
+    transform: translate(-80%, 0%);
+    opacity: 0;
+    animation: chair-rose 1s ease forwards 0.5s;
+  }
+
+  .big-rose {
+    height: 110px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: rotateZ(45deg);
+    animation: chair-rose 1s ease forwards 0.8s;
+    opacity: 0;
+  }
+  .small-rose {
+    height: 30px;
+    position: absolute;
+    z-index: -10;
+    top: 30%;
+    left: 70%;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: chair-rose 1s ease forwards 1s;
+  }
+}

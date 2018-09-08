@@ -1,0 +1,42 @@
+nav{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    min-height: 10vh;
+    align-items: center;
+    z-index: 100;
+.logo {
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    transition: opacity 0.5s ease;  
+    padding: 20px 0px;
+    a{
+      color: #eeeeee;
+      text-decoration: none;
+    }
+    img {
+      width: 30px;
+    }
+    h4 {
+      font-family: "Merienda One", cursive;
+      font-weight: 400;
+    }
+  }
+  ul{
+    font-family: "Montserrat", sans-serif;
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+      li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: $textColor;
+           
+        }
+      }
+  }
+}

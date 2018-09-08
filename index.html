@@ -12,39 +12,86 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="./img/tree.svg" alt="">
-            <h4>Wood Only</h4>
-        </div>
         <div class="intro-text">
             <h1 class="intro">Comfort</h1>
             <h3 class="intro">Your dream interior design</h3>
         </div>
-        <img class="chair" src="./img/chair-intro.png" alt="">
-        <img class="big-rose" src="./img/big-rose.png" alt="">
-        <img class="small-rose" src="./img/small-rose.png" alt="">
+        <img class="chair" src="./img/clock.png" alt="clock">
     </header>
+    <nav>
+        <div class="logo">
+            <img src="./img/tree.svg" alt="">
+            <a href="index.html">
+                <h4>Wood Only</h4>
+            </a>
 
-    <section class="products">
-        <div class="products-text slide-left">
-            <h1>Everlasting Wood</h1>
-            <p>Our products provide high quality wood that will last up to 100 years. Choose from a wide range of interior items
-                down bellow</p>
-            <button class="brown-btn">Purchase</button>
         </div>
-        <img class="slide-left" src="./img//wardrobe.png" alt="">
+        <ul class="navigation">
+            <li>
+                <a href="./products/">Products</a>
+            </li>
+            <li>
+                <a href="./contact/">Contact</a>
+            </li>
+            <li>
+                <a href="#">Terms</a>
+            </li>
+            <div class="close-burger">
+                <div class="line"></div>
+                <div class="line2"></div>
+            </div>
+        </ul>
+        <svg class="burger" width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 35H91" stroke="#EEEEEE" stroke-width="5" />
+            <path d="M8 50H65" stroke="#EEEEEE" stroke-width="5" />
+            <path d="M8 66H41" stroke="#EEEEEE" stroke-width="5" />
+        </svg>
+    </nav>
+
+    <section class="first-product">
+        <div class="price no-slide">
+            <h2>Everlast chair</h2>
+            <h4>By Wood Only</h4>
+            <h3>$500</h3>
+        </div>
+        <img src="./img/armchair_PNG7062.png" alt="wardrobe" class="slide-up">
+        <div class="description-container ">
+            <div class="slide-left">
+                <h1>
+                    <span>Quality</span> Products</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate non explicabo nesciunt obcaecati atque
+                    quisquam architecto, dicta beatae ipsam quidem aut reiciendis maiores expedita.</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
     </section>
-    <section class="products2">
-        <div class="products-text2 slide-left">
-            <h1>Great</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit delectus accusamus voluptatum eligendi
-                magnam ab consequuntur repellendus! Autem, aspernatur maiores!</p>
-            <button class="brown-btn">Purchase</button>
+    <section class="second-product">
+        <img src="./img/Couch-PNG-File.png" alt="wardrobe" class="no-slide">
+        <div class="description-container">
+            <div class="slide-up">
+                <h1>Couches for your Family</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate non explicabo nesciunt obcaecati atque
+                    quisquam architecto, dicta beatae ipsam quidem aut reiciendis maiores expedita.</p>
+            </div>
         </div>
-        <img class="slide-left" src="./img/couch.png" alt="">
     </section>
 
+
+    <footer>
+        <div class="footer-logo">
+            <h4>Wood Only</h4>
+        </div>
+        <div class="social-links">
+            <p>Visit us</p>
+            <img src="./img/twitter-brands (1).svg" alt="twitter-brands">
+            <img src="./img/facebook-brands.svg" alt="facebook-brands">
+            <img src="./img/instagram-brands.svg" alt="instagram-brands">
+        </div>
+    </footer>
     <script src="main.js"></script>
+    <script>
+        window.onload = introPage;
+    </script>
 </body>
 
 </html>

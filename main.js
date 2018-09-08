@@ -1,51 +1,103 @@
-window.addEventListener("DOMContentLoaded", parallaxEffect, false);
+function introPage() {
+  const slideLeft = document.querySelectorAll(".slide-left");
+  const noSlide = document.querySelectorAll('.no-slide');
+  const slideUp = document.querySelectorAll('.slide-up');
+  const navigation = document.querySelector('.navigation');
+  const logo = document.querySelector('.logo');
+  const burger = document.querySelectorAll('.burger path');
+  const burgerItem = document.querySelector('.burger');
+  const closeBurger = document.querySelector('.close-burger');
 
-let scrollY;
-const header = document.querySelector("header");
-const bigRose = document.querySelector(".big-rose");
-const smallRose = document.querySelector(".small-rose");
-const slideLeft = document.querySelectorAll(".slide-left");
-const products1 = document.querySelector(".products");
-const products2 = document.querySelector(".products2");
-let pause = false;
 
-function parallaxEffect() {
-  scrollY = window.scrollY;
-  if (pause) return;
-  requestAnimationFrame(parallaxEffect);
-  parallaxEl(0, scrollY / 1, header);
-  parallaxEl(0, scrollY / 0.8, bigRose);
-  parallaxEl(0, scrollY / 4, smallRose);
-}
-
-function parallaxEl(x, y, el) {
-  el.style.transform = "translate3d(" + x + "," + y + "px, 0)";
-}
-
-function fadeItems() {
-  //Fade each slide
-  slideLeft.forEach(slide => {
-    if (slide.getBoundingClientRect().top - window.innerHeight / 1.5 < 0) {
-      slide.classList.add("fade-move");
+  //Item Fade
+  function fadeItems() {
+    let scrollY = window.scrollY;
+    //Make items appear
+    slideLeft.forEach(slide => {
+      if (slide.getBoundingClientRect().top - window.innerHeight / 1.3 < 0) {
+        slide.classList.add("fade-move");
+      }
+    });
+    noSlide.forEach(slide => {
+      if (slide.getBoundingClientRect().top - window.innerHeight / 1.3 < 0) {
+        slide.classList.add("fade-move");
+      }
+    });
+    slideUp.forEach(slide => {
+      if (slide.getBoundingClientRect().top - window.innerHeight / 1.3 < 0) {
+        slide.classList.add("fade-move");
+      }
+    });
+    //Navigation
+    if (window.innerWidth > 768) {
+      if (scrollY > 100) {
+        logo.classList.add('no-slide');
+        navigation.classList.add('nav-fade');
+        burger.forEach((line, index) => {
+          line.style.animation = `nav 0.5s ease forwards ${index / 6}s`;
+        });
+      } else {
+        logo.classList.remove('no-slide');
+        navigation.classList.remove('nav-fade');
+        burger.forEach((line, index) => {
+          line.style.animation = `navFade 0.5s ease forwards `;
+        });
+      }
     }
+
+  }
+  window.addEventListener("scroll", debounce(fadeItems, 100));
+
+  burgerItem.addEventListener('click', function () {
+
+    navigation.classList.add('open');
+    closeBurger.style.display = 'block';
+    burgerItem.style.display = 'none';
+    document.body.style.overflow = 'hidden';
   });
+
+  closeBurger.addEventListener('click', function () {
+    closeBurger.style.display = 'none';
+    burgerItem.style.display = 'block';
+    navigation.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  });
+
 }
 
-window.addEventListener("scroll", throttle(fadeItems, 200));
+function debounce(func, delay) {
+  let inDebounce
+  return function () {
+    const context = this
+    const args = arguments
+    clearTimeout(inDebounce)
+    inDebounce = setTimeout(() => func.apply(context, args), delay)
+  }
+}
 
-//Debounce
-function throttle(func, interval) {
-  var timeout;
-  return function() {
-    var context = this,
-      args = arguments;
-    var later = function() {
-      timeout = false;
-    };
-    if (!timeout) {
-      func.apply(context, args);
-      timeout = true;
-      setTimeout(later, interval);
-    }
-  };
+
+
+function mobileNav() {
+  const burgerItem = document.querySelector('.burger');
+  const closeBurger = document.querySelector('.close-burger');
+  const navigation = document.querySelector('.navigation');
+
+  if (window.innerWidth < 768) {
+    burgerItem.style.position = "static";
+  }
+  burgerItem.addEventListener('click', function () {
+
+    navigation.classList.add('open');
+    closeBurger.style.display = 'block';
+    burgerItem.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBurger.addEventListener('click', function () {
+    closeBurger.style.display = 'none';
+    burgerItem.style.display = 'block';
+    navigation.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  });
+
 }

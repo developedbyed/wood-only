@@ -1,0 +1,25 @@
+footer{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+    background-color: #4e3c3c;
+    align-items: center;
+    color: #eeeeee;
+    .footer-logo{
+        font-family: "Merienda One", cursive;
+       
+    }
+    .social-links{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        p{
+            margin: 20px;
+        }
+        img{
+            height: 30%;
+            margin: 20px;
+        }
+    }
+}

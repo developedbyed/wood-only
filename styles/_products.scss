@@ -1,103 +1,102 @@
-.first-product{
+.first-product {
   height: 80vh;
-  background: #CCC7AF;
+  background: #ccc7af;
   position: relative;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: space-around;
-  img{
+  img {
     position: absolute;
     height: 70%;
     bottom: -10%;
     left: 20%;
     transform: translate(-20%, 0%);
   }
-  .price{
+  .price {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     align-items: center;
     flex: 1;
     height: 50%;
-    h2{
+    h2 {
       font-size: 35px;
     }
-    h4{
+    h4 {
       padding: 20px 0px;
     }
-    h3{
+    h3 {
       font-size: 30px;
       color: #864e4e;
     }
   }
-  .description-container{
-    
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #1c1c1d;
-  color: #eeeeee;
-  p{
-    width: 50%;
-    line-height: 30px;
-  }
-  div{
-    height: 50%;
-    width: 50%;
-    h1{
-      text-transform: uppercase;
-      span{
-        color: #864E4E;
+  .description-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1c1c1d;
+    color: #eeeeee;
+    p {
+      width: 50%;
+      line-height: 30px;
+    }
+    div {
+      height: 50%;
+      width: 50%;
+      h1 {
+        text-transform: uppercase;
+        span {
+          color: #864e4e;
+        }
+      }
+      p {
+        padding: 30px 0px;
+        width: 100%;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #864e4e;
+        color: #eeeeee;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
       }
     }
-    p{
-      padding: 30px 0px;
-      width: 100%;
-    }
-    button{
-      padding: 10px 20px;
-      background-color: #864e4e;
-      color: #eeeeee;
-      border: none;
-      font-size: 15px;
-      cursor: pointer;
-      font-family: "Montserrat", sans-serif;
-    }
-  }
   }
 }
 
-.second-product{
+.second-product {
   height: 80vh;
-  background: linear-gradient(to right,#ededed,#b6aaaa);
+  background: linear-gradient(to right, #ededed, #b6aaaa);
   position: relative;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
   display: flex;
-  img{
+  img {
     position: absolute;
     height: 50%;
     bottom: 0%;
     right: -10%;
     transform: translate(10%, 0%);
   }
-  .description-container{
+  .description-container {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
-    
-    div{
+    height: 80%;
+
+    div {
       width: 50%;
-      h1{
+      h1 {
         font-size: 35px;
       }
-      p{
+      p {
         padding: 30px 0px;
         line-height: 30px;
       }

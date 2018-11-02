@@ -22,7 +22,7 @@
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e3c3c), to(#864e4e));
   background: linear-gradient(to top right, #4e3c3c, #864e4e);
@@ -32,7 +32,7 @@ header {
 header .intro-text {
   font-family: "Montserrat", sans-serif;
   width: 80%;
-  height: 50%;
+  min-height: 100vh;
   color: #eeeeee;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,9 +41,9 @@ header .intro-text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
 }
 
@@ -93,7 +93,7 @@ header .big-rose {
 }
 
 .first-product {
-  height: 80vh;
+  min-height: 100vh;
   background: #ccc7af;
   position: relative;
   overflow: hidden;
@@ -107,7 +107,7 @@ header .big-rose {
 
 .first-product img {
   position: absolute;
-  height: 70%;
+  height: 60%;
   bottom: -10%;
   left: 20%;
   -webkit-transform: translate(-20%, 0%);
@@ -131,7 +131,6 @@ header .big-rose {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 50%;
 }
 
 .first-product .price h2 {
@@ -145,6 +144,7 @@ header .big-rose {
 .first-product .price h3 {
   font-size: 30px;
   color: #864e4e;
+  margin-bottom: 8rem;
 }
 
 .first-product .description-container {
@@ -165,6 +165,7 @@ header .big-rose {
           align-items: center;
   background-color: #1c1c1d;
   color: #eeeeee;
+  min-height: 100%;
 }
 
 .first-product .description-container p {
@@ -201,7 +202,7 @@ header .big-rose {
 }
 
 .second-product {
-  height: 80vh;
+  min-height: 80vh;
   background: -webkit-gradient(linear, left top, right top, from(#ededed), to(#b6aaaa));
   background: linear-gradient(to right, #ededed, #b6aaaa);
   position: relative;
@@ -232,7 +233,7 @@ header .big-rose {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  min-height: 100%;
 }
 
 .second-product .description-container div {

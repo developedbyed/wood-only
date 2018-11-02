@@ -1,16 +1,16 @@
 header {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background: linear-gradient(to top right, #4e3c3c, #864e4e);
   overflow: hidden;
   .intro-text {
     font-family: "Montserrat", sans-serif;
     width: 80%;
-    height: 50%;
+    min-height: 100vh;
     color: $textColor;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0 auto;
     h1 {
       font-size: 60px;
